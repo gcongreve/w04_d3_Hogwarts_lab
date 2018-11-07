@@ -8,5 +8,5 @@
 <form action="/students/<%= @student.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>
-<form action="/students/<%= @student.id %>/edit/" method="get">
-  <input type="submit" value="Edit">
+
+<button type="button" name="Edit"><a href="/students/<%= @student.id %>/edit/">Edit Student</a></button>

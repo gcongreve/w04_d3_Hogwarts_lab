@@ -1,0 +1,11 @@
+<p>The following student has been created:</p>
+<p>Name: <%= @student.format_name%></p>
+<p>Age: <%=@student.age%> </p>
+<p>House: <%= @student.house %></p>
+<br>
+<br>
+<button type="button" name="Edit"><a href="/students/<%= @student.id %>/edit/">Edit Student</a></button>
+<br>
+<form action="/students/<%= @student.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>

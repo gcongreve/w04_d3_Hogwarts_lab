@@ -12,6 +12,7 @@ end
 
 # new
 get '/students/new/?' do
+  @houses = House.all
   erb(:new)
 end
 
@@ -19,7 +20,7 @@ end
 post '/students/?' do
   @student = Student.new(params)
   @student.save
-  redirect to '/students'
+  erb(:create)
 end
 
 
@@ -32,8 +33,7 @@ end
 # edit
 get '/students/:id/edit/?' do
   @student = Student.find(params[:id])
-  #@houses = [1,2,3,4]
-#  @houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+  @houses = House.all
   erb(:edit)
 end
 
