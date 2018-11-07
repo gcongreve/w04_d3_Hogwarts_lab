@@ -1,10 +1,21 @@
 <p>The students are:</p>
 
-<% @students.each do |student|%>
-  <p>First name: <%= student.first_name %></p>
-  <p>Last name: <%= student.last_name %></p>
-  <p>Age: <%= student.age %></p>
-  <p>House: <%= student.house %></p>
-  <p><a href="/students/<%=student.id%>">Show Student</a></p>
-  <hr>
-<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+          	<th>House</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student|%>
+        <tr>
+            <td><%= student.format_name %></td>
+            <td><%= student.age %></td>
+            <td><%= student.house %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

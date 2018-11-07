@@ -3,6 +3,7 @@ body {
   font-family: 'Rye', cursive;
   color: #ccad00;
   background-image: url("/harry_potter.gif");
+  text-align: center;
 }
 
 a {
@@ -12,6 +13,11 @@ a {
 
 a:hover {
   color: darkred;
+}
+
+table {
+  justify-content: center;
+  margin-left: 30%;
 }
 
 #menu {
