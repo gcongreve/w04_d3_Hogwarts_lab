@@ -29,10 +29,7 @@ get '/students/:id' do
   erb(:show)
 end
 
-
-
 # edit
-
 get '/students/:id/edit' do
   @student = Student.find(params[:id])
   #@houses = [1,2,3,4]

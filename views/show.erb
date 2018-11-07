@@ -1,9 +1,8 @@
 <p>Student selected:</p>
 <br>
-<p><%= @student.first_name %></p>
-<p><%= @student.last_name %></p>
-<p><%= @student.house_id %></p>
-<p><%= @student.age %></p>
+<p>Name: <%= @student.format_name %></p>
+<p>House id: <%= @student.house %></p>
+<p>Age: <%= @student.age %></p>
 
 
 <form action="/students/<%= @student.id %>/delete" method="post">
